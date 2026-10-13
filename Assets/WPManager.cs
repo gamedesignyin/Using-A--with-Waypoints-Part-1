@@ -17,8 +17,8 @@ public class WPManager : MonoBehaviour
     public Link[] links;
     public Graph graph = new Graph();
 
-    // Start is called before the first frame update
-    void Start()
+    // Mudamos para Awake para garantir que o grafo é criado ANTES de qualquer Start()
+    void Awake()
     {
         if (waypoints.Length > 0)
         {
